@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <script>
+
+        var count = 0
+
+        function onOver(elemento) {
+            elemento.style.backgroundColor ="whiteSmoke"
+            elemento.style.color ="black"
+        }
+
+        function onOut(elemento){
+            elemento.style.backgroundColor ="rgba(196, 24, 196, 0.873)"
+            elemento.style.color = "whiteSmoke"
+        }
+
+        function incrementa() {
+            var numero = document.getElementsByTagName("h1")[1]
+            count++
+            numero.innerHTML = count
+        }
+
+        function decrementa() {
+            var numero = document.getElementsByTagName("h1")[1]
+            count--
+            numero.innerHTML = count
+        }
+
+    </script>
+
+    <div class="container">
+        <div class="titulo">
+            <h1>Contador</h1>
+        </div>
+        
+        <div id="numero">
+            <h1>0</h1>
+        </div>
+
+        <div class="botao">
+            
+            <div onclick="decrementa()" onmouseover="onOver(this)" onmouseout="onOut(this)" class="item">
+                <h2>-</h2>
+            </div>
+
+            <div onclick="incrementa()" onmouseover="onOver(this)" onmouseout="onOut(this)" class="item">
+                <h2>+</h2>
+
+            </div>
+
+        </div>
+    
+    </div>
+ 
+</body>
+</html>
